@@ -1,0 +1,92 @@
+.Modal {
+  position: absolute;
+  top: 12%;
+  left: 9%;
+  right: 9%;
+  bottom: 12%;
+  border: 1px solid rgb(255, 255, 255);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 7px 9px 15px 11px rgba(34, 60, 80, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+}
+
+.modal__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.modal__body {
+  flex: 1;
+  text-align: left;
+  overflow: auto;
+}
+
+.modal__body h1 {
+  line-height: 30px;
+  text-align:center ;
+  padding-top: 20px;
+}
+
+.modal__body li {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding-left: 15%;
+}
+
+.modal__body li:first-child {
+  padding-top: .5%;
+}
+
+.modal__body li:hover {
+  transition: 0.3s;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.modal__footer {
+  height: auto;
+}
+
+.modal__close {
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  width: 5%;
+  height: 5%;
+  opacity: 0.7;
+}
+
+.modal__close:hover {
+  transition: 0.2s;
+  width: 4.8%;
+  height: 4.8%;
+  opacity: 0.9;
+  right: 2.1%;
+  top: 2.1%;
+}
