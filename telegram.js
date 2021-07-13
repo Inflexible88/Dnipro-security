@@ -11,12 +11,8 @@ const bot = new TelegramApi(token, { polling: true });
 
 app.set('port', PORT);
 app.use(express.json());
-app.use(express.static(path.join(__dirname + '/public')));
+app.use('/', express.static(path.join(__dirname, '../public')))
 
-app.get('*', function (req, res) {
-  const index = path.join(__dirname, 'build', 'index.html');
-  res.sendFile(index);
-});
 
 app.post('/bot', (req, res) => {
   res.send(req.body);
