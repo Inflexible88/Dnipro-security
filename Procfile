@@ -1,1 +1,1 @@
-web: node telegram.js
+web: node server.js

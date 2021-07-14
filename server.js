@@ -3,7 +3,7 @@ const path = require('path');
 const TelegramApi = require('node-telegram-bot-api');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 const chatId = -1001582516206;
 const token = '1893426710:AAEfP3aWYYsSzrU6xLkQW7aeR4j7VflichU';
@@ -16,9 +16,10 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('/build'));
 
   // Express serve up index.html file if it doesn't recognize route
-app.get('/', function(req, res) {
+  app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+  });
+}
 
 app.post('/bot', (req, res) => {
   res.send(req.body);
