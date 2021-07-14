@@ -20,6 +20,7 @@
     "react-truncate": "^2.4.0",
     "yup": "^0.32.9"
   },
+  "proxy": "http://localhost:3002",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
