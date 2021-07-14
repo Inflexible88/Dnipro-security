@@ -16,10 +16,9 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('/build'));
 
   // Express serve up index.html file if it doesn't recognize route
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-  });
-}
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 
 app.post('/bot', (req, res) => {
