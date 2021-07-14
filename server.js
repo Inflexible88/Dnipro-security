@@ -11,7 +11,7 @@ const bot = new TelegramApi(token, { polling: true });
 
 app.set('port', PORT);
 app.use(express.json());
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
   app.use(express.static('/build'));
 
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
   app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
   });
-}
+// }
 
 app.post('/bot', (req, res) => {
   res.send(req.body);
